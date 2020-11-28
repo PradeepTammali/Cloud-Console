@@ -10,4 +10,4 @@ kubectl -n <namespace> exec -it <pod> bash
 It will prompt for the Username and Password along the with the banner mentioned.
 
 ## How to use
-If you already have a custom built web based shell then you can configure your server to reach the console deployed. You can deploy a simple web based cloud console with python as backend to connect to the console as explained in this [link](#).
+If you already have a custom built web based shell then you can configure your server to reach the console deployed. You can deploy a simple web based cloud console with python as backend to connect to the console as explained in this [link](https://github.com/PradeepTammali/Cloud-Console/tree/main/ConsoleServer).
