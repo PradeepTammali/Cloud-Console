@@ -26,7 +26,8 @@ sudo docker push cloudconsole.registry.com:5000/cloud-console:v1
 ```
 
 ## Deploy
-You can use [minikube](https://minikube.sigs.k8s.io/docs/) or [Kind](https://kind.sigs.k8s.io/) if you do not have any kubernetes cluster available.
+Deploy the Cloud Console as Deployment in kubernetes cluster with the following command and set the RBAC for the required Groups and Users in the `rbac.yaml`. You can use [minikube](https://minikube.sigs.k8s.io/docs/) or [Kind](https://kind.sigs.k8s.io/) if you do not have any kubernetes cluster available.
 ```
-kubectl create -f cloud-console.yaml
+kubectl apply -f cloud-console.yaml
+kubectl apply -f rbac.yaml
 ```
