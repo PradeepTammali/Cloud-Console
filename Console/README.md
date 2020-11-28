@@ -16,10 +16,13 @@ K8S_APISERVER="Kubernets Api server URL"
 ```
 
 ## Build
-
-`sudo docker build -t cloudconsole.registry.com:5000/cloud-console:v1 .
-sudo docker push cloudconsole.registry.com:5000/cloud-console:v1`
+```
+git clone https://github.com/PradeepTammali/Cloud-Console.git
+cd Cloud-Console/Console/
+sudo docker build -t cloudconsole.registry.com:5000/cloud-console:v1 .
+sudo docker push cloudconsole.registry.com:5000/cloud-console:v1
+```
 
 ## Deploy
-
+You can use [minikube](https://minikube.sigs.k8s.io/docs/) or [Kind](https://kind.sigs.k8s.io/) if you do not have any kubernetes cluster available.
 `kubectl create -f cloud-console.yaml`
