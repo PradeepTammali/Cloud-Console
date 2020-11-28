@@ -1,0 +1,59 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cloud-console-server
+spec:
+  backend:
+    serviceName: cloud-console-server
+    servicePort: 30002
+---
+kind: Service
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    name: http
+    port: 30002
+    targetPort: 5000
+  selector:
+    app: cloud-console-server
+apiVersion: v1
+metadata:
+  name: cloud-console-server
+---
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: cloud-console-server
+        image: cloud-console-server.registry.com:5000/cloud-console-server:v1
+        imagePullPolicy: Always
+        env:
+        - name: API_SERVER
+          value: ""
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: '0.2'
+            memory: 200Mi
+          limits:
+            cpu: '0.2'
+            memory: 200Mi
+    metadata:
+      labels:
+        app: cloud-console-server
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloud-console-server
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+apiVersion: apps/v1
+metadata:
+  name: cloud-console-server

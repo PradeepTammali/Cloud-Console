@@ -76,6 +76,10 @@ create_user() {
         useradd -u ${2} -m -G cloudconsole -d /home/${1} -s /bin/bash -c "NSC user" ${1} > /dev/null 2>&1
 }
 
+function ctrl_exit() {
+        exit 1
+}
+
 # User authentication
 auth() {
         log INFO "Authenticating the user..."
@@ -105,6 +109,8 @@ auth() {
                 echo -e "\nSuccess."
         fi
 }
+
+trap ctrl_exit SIGINT
 
 if [ ! -f /tmp/shell-login ]; then
         cat /etc/issue
