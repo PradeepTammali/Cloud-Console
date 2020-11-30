@@ -6,6 +6,8 @@ Before proceeding on how deploy the the web based Cloud Console Server, make sur
 
 Once you have build, deployed console and given permission for all the required groups and users then you can deploy this Cloud Console Server to access the Pod from browser. This Server will take some inputs such as Namespace, Pod, container and ID Token to connect to the console pod. 
 
+In this Cloud Console Server I am explicitly taking the id token from UI and using it to connect to the Cloud Console pod assuming that the server does not have permission to connect to Cloud Console pod.  Instead you can give permission in RBAC for the Cloud Console Server to access Cloud Console pod and avoid taking the id token from UI. You can use pod internal kubernetes configuration to connect the console pod.
+
 ## Configuration
 Please make sure you are passing environment variable `API_SERVER` while running the Cloud Console Server. This Kubernetes api server is used to connect to Cloud Console pod using python-kubernetes client. If you are running the server locally export the environment variables. If you are deploying on Kubernetes please make sure you pass the api server URL in the YAML.
 ```
