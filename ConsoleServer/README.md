@@ -34,7 +34,7 @@ kubectl apply -f cloud-console-server.yaml
 ## Customize
 ```
 git clone https://github.com/PradeepTammali/Cloud-Console.git
-cd Cloud-Console/ConsoleServer/
+cd Cloud-Console/ConsoleServer/src/
 code .
 ```
 
