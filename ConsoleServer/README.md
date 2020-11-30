@@ -24,7 +24,7 @@ sudo docker push cloud-console-server.registry.com:5000/cloud-console-server:v1
 ```
 
 ## Deploy
-Deploy the Cloud Console Server in kubernets.
+Deploy the Cloud Console Server in kubernetes.
 ```
 kubectl apply -f cloud-console-server.yaml
 ```
