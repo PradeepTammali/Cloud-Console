@@ -1,7 +1,8 @@
 # Cloud-Console
 A web based console deployed on Kubernetes with prerequisites modules installed and configured. Multi tenant console with restriction of data among the users and  temporary storage.
 
-![Cloud Console image](https://github.com/PradeepTammali/Cloud-Console/blob/main/CloudConsoleServer.PNG)
+![Cloud Console Server image](https://github.com/PradeepTammali/Cloud-Console/blob/main/CloudConsoleServer.PNG)
+![Cloud Console image](https://github.com/PradeepTammali/Cloud-Console/blob/main/CloudConsole.PNG)
 ## Build Cloud Console
 Build the Cloud Console as explained in this [link](https://github.com/PradeepTammali/Cloud-Console/tree/main/Console) . Once the Console is build and deployed then you can test the pod or console by logging into the pod as following.
 ```
