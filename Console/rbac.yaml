@@ -36,3 +36,7 @@ subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: Group
   name: group2
+## Uncomment the following lines if you want to allow the access for all the authenticated Users.
+#- apiGroup: rbac.authorization.k8s.io
+#  kind: Group
+#  name: system:authenticated
