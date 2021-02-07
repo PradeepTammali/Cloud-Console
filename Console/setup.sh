@@ -177,4 +177,5 @@ if [ ! -f /tmp/shell-login ]; then
         fi
         su - $UNAME
 fi
+rm /tmp/shell-login > /dev/null 2>&1
 exit 0
