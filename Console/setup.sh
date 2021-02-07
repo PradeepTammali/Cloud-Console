@@ -73,7 +73,7 @@ decode_jwt() { _decode_base64_url $(echo -n $1 | cut -d "." -f ${2:-2}) | jq .; 
 
 create_user() {
         log INFO "Creating user..."
-        useradd -u ${2} -m -G cloudconsole -d /home/${1} -s /bin/bash -c "NSC user" ${1} > /dev/null 2>&1
+        useradd -u ${2} -m -G cloudconsole -d /home/${1} -s /bin/bash -c "Cloud Console user" ${1} > /dev/null 2>&1
 }
 
 function ctrl_exit() {
