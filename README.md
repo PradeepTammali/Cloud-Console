@@ -13,5 +13,5 @@ It will prompt for the Username and Password along the with the banner mentioned
 ## Web Cloud Console Server
 This is basic web based shell build in Python and Javascript using xterm to connect to the cloud console and access the shell from browser. If you already have a custom built web based shell then you can configure your server to reach the cloud console deployed. You can deploy a simple web based cloud console to connect to the console as explained in this [link](https://github.com/PradeepTammali/Cloud-Console/tree/main/ConsoleServer).
 
-## Blog
-https://pradeeptammali.medium.com/cloud-console-2e2a91961a1f
+## [Blog](https://pradeeptammali.medium.com/cloud-console-2e2a91961a1f)
+
